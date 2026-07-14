@@ -56,4 +56,15 @@ export const events: Event[] = [
     source: "Municipality",
     trending: false,
   },
+  {
+    id: 6,
+    title: "Local DJ Showcase",
+    venue: "Maluti Mall",
+    date: "10 September",
+    time: "19:00",
+    category: "Music",
+    pulseScore: 78,
+    source: "TikTok",
+    trending: false,
+  },
 ];

@@ -1,4 +1,5 @@
 import NewsCard from "./NewsCard";
+import { news } from "../data/news";
 
 function LatestNews() {
   return (
@@ -9,23 +10,14 @@ function LatestNews() {
         </h2>
 
         <div className="flex flex-wrap gap-6">
-          <NewsCard
-            title="Summer Bash tickets almost sold out"
-            source="Facebook"
-            published="2 hours ago"
-          />
-
-          <NewsCard
-            title="Local artist announces new EP"
-            source="Instagram"
-            published="Yesterday"
-          />
-
-          <NewsCard
-            title="New music festival coming to QwaQwa"
-            source="Community Page"
-            published="3 days ago"
-          />
+          {news.map((article) => (
+            <NewsCard
+              key={article.id}
+              title={article.title}
+              source={article.source}
+              published={article.published}
+            />
+          ))}
         </div>
       </div>
     </section>
